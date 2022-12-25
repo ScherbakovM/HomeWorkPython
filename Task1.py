@@ -51,7 +51,7 @@
 # ac = math.pow((dot_bx - dot_ax),2)
 # bc = math.pow((dot_by - dot_ay),2)
 # result = math.sqrt( ac + bc )
-# print(f"рузльатат  = {result:.3f}")
+# print(f"результат  = {result:.3f}")
 
 
    
