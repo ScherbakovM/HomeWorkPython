@@ -42,17 +42,13 @@
 
 # 4 Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 2D пространстве.
 
-# import math
-# dot_ax = int(input('Введите для точки A координаты точки x: '))
-# dot_ay = int(input('Введите для точки A координаты точки y: '))
-# dot_bx = int(input('Введите для точки B координаты точки x: '))
-# dot_by = int(input('Введите для точки B координаты точки y: '))
+import math
+dot_ax = int(input('Введите для точки A координаты точки x: '))
+dot_ay = int(input('Введите для точки A координаты точки y: '))
+dot_bx = int(input('Введите для точки B координаты точки x: '))
+dot_by = int(input('Введите для точки B координаты точки y: '))
 
-# ac = math.pow((dot_bx - dot_ax),2)
-# bc = math.pow((dot_by - dot_ay),2)
-# result = math.sqrt( ac + bc )
-# print(f"рузльатат  = {result:.3f}")
-
-
-   
-
+ac = math.pow((dot_bx - dot_ax),2)
+bc = math.pow((dot_by - dot_ay),2)
+result = math.hypot( ac, bc )
+print(f"рузльатат  = {result:.3f}")
