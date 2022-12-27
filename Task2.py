@@ -32,6 +32,31 @@
 # Ввод: 4
 # [-4, -3, -2, -1, 0, 1, 2, 3,4]
 
+
+# Number = int(input('введите ваше число N: '))
+# myList = [] 
+# for i in range(-Number, Number+1 ):
+#     myList.append(i)
+
+# MaxValue = Number*2 + 1
+
+# check = 'off'
+
+# findIndex = []
+# for i in range(5):
+#     app = int(input(f'Максимальный индекс = {2*Number+1} \nВведите {i + 1} искомый индекс: '))
+#     if(app < MaxValue):
+#         findIndex.append(app)
+#     else:
+#         print('Вы ввели некоректное число')
+#         break
+
+
+# result = 1
+# for i in range(5):
+#     result *= myList[findIndex[i]]
+# print(f'произведение введенных вами индексов {findIndex} списка {myList}  = {result}')
+
 # 4)Требуется посчитать сумму чётных чисел, расположенных между числами 1 и N включительно.
 # summ = 0
 # Number = int(input('введите ваше число : '))
