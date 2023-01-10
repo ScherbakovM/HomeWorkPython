@@ -97,12 +97,11 @@ number = int(input('Введите число в десятичной систе
 print(f'Вы ввели число : {number}')
 
 def binarySys(number):
-        remainder = 0        
-        if(number > 0):
-                remainder = number % 2
-                print(remainder, end = '')
-                binarySys(int(number / 2))       
-
+        remainder = '' 
+        if(number > 0): 
+                remainder = number % 2             
+                binarySys(int(number / 2))
+        print(remainder, end = '')
 binarySys(number)
 
 
