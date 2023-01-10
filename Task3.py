@@ -93,18 +93,40 @@ import math
 # - 3 -> 11
 # - 2 -> 10
 
-number = int(input('Введите число в десятичной системе которое вы хотите преобразовать в двоичную: '))
-print(f'Вы ввели число : {number}')
+# number = int(input('Введите число в десятичной системе которое вы хотите преобразовать в двоичную: '))
+# print(f'Вы ввели число : {number} \nВ двоичной системе это число = ')
 
-def binarySys(number):
-        remainder = '' 
-        if(number > 0): 
-                remainder = number % 2             
-                binarySys(int(number / 2))
-        print(remainder, end = '')
-binarySys(number)
+# def binarySys(number):
+#         remainder = str('')
+#         if(number > 0): 
+#                 remainder = number % 2          
+#                 binarySys(int(number / 2))
+#         print(remainder, end = '')
+#         return remainder
+        
+# result = binarySys(number)
 
 
-#   # Остаток
-#                 res =  res +  remainder 
-#                 number = (math.floor(number / 2)) # неполное частное 
+# Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
+
+# Пример: - для k = 8 список будет выглядеть так: [-21 ,13, -8, 5, −3, 2, −1, 1, 0, 1, 1, 2, 3, 5, 8, 13, 21]
+
+# k = int(input('введите кол-во элементов списка негафибоначи: '))
+# a = 1
+# b = 0
+# c = 0
+# d = 1
+
+
+# list = []
+# for i in range (1, k + 2): 
+#     list.append(b)
+#     a,b = b, a - b
+# list.reverse()
+
+# for i in range (1, k + 1 ): 
+#     list.append(d)
+#     c, d = d, c + d
+# print('Ваш список :' , list)
+
+   
