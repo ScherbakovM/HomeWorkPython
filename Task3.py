@@ -82,7 +82,7 @@ import math
 #                         minNumber = i
 # print('максимальная дробная часть', maxNumber)                       
 # print('минимальная  дробная часть', minNumber)                       
-# print(maxNumber - minNumber)
+# print(f'разница между максимальной и минимальной дробной часть = {maxNumber - minNumber}')
 
 
 # Напишите программу, которая будет преобразовывать десятичное число в двоичное.
@@ -93,11 +93,19 @@ import math
 # - 3 -> 11
 # - 2 -> 10
 
-        
+number = int(input('Введите число в десятичной системе которое вы хотите преобразовать в двоичную: '))
+print(f'Вы ввели число : {number}')
+
+def binarySys(number):
+        remainder = 0        
+        if(number > 0):
+                remainder = number % 2
+                print(remainder, end = '')
+                binarySys(int(number / 2))       
+
+binarySys(number)
 
 
-
-
-
-
-
+#   # Остаток
+#                 res =  res +  remainder 
+#                 number = (math.floor(number / 2)) # неполное частное 
