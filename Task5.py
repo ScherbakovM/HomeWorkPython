@@ -72,22 +72,120 @@ import random
 
 # Вывод: stroka = "aaabbbbccbbb"
 
-with open('rle_pack.txt', 'r') as entered:
-    stroka = entered.read() # читаем фаил
-print(stroka)
 
-def rle_package(arg):
-    newStroka = ''
-    i = 0
-    while(i < len(arg)):
-        count = 1 # Подсчитываем кол-во одинаковых элементов
-        while(i + 1 < len(arg) and arg[i] == arg[i+1]): #Выполняется пока арг + 1 меньше длины арг
-            count = count + 1
-            i = i + 1
-        newStroka += str(count) + arg[i] # записываем кол-во повторений и значение индекса
-        i = i + 1
-    return newStroka
-newStroka = rle_package(stroka)
 
-with open('rle_pack.txt','a') as entered:
-    entered.write(newStroka)
+# with open('rle_pack.txt', 'r') as entered:
+#     stroka = entered.read() # читаем фаил
+# print(stroka)
+
+# def rle_package(arg): #Запаковка 
+#     newStroka1 = ''
+#     i = 0
+#     while(i < len(arg)):
+#         count = 1 # Подсчитываем кол-во одинаковых элементов
+#         while(i + 1 < len(arg) and arg[i] == arg[i+1]): #Выполняется пока арг + 1 меньше длины арг
+#             count = count + 1
+#             i = i + 1
+#         newStroka1 += str(count) + arg[i] # записываем кол-во повторений и значение индекса
+#         i = i + 1
+#     return newStroka1
+# newStroka1 = rle_package(stroka)
+
+# with open('rle_pack.txt','a') as entered:
+#     entered.write(f'\nPackage text : {newStroka1}')
+
+
+
+# with open('rle_unpack.txt', 'r') as enter: 
+#     rle_pack = enter.read() # читаем фаил
+#     print(rle_pack)
+
+# def rle_unpackage(arg):# распаковка
+#     if len(arg) < 1:
+#         return ''
+#     newStroka2 = ''
+#     repeat = ''
+#     for elem in arg:
+#         if elem.isdigit():
+#                 repeat += elem
+#         else:
+#             for i in range(int(repeat)):
+#                 newStroka2 += elem # Записываем i repeat раз
+#             else:
+#                  repeat = ''
+#     return newStroka2
+# newStroka2 = rle_unpackage(rle_pack)
+
+# with open('rle_unpack.txt','a') as entered: # Распаковываем. записываем в тот же фаил
+#     entered.write(f'\nunpackage text : {newStroka2}')
+
+
+
+
+
+
+
+
+# 2) Создайте программу для игры в ""Крестики-нолики"" человек vs человек.
+# 1 | 2 | X
+# 4 | X | O
+# X | 8 | O
+
+# print("*" * 10, " Игра Крестики-нолики для двух игроков ", "*" * 10)
+
+# board = list(range(1,10))
+
+# def draw_board(board):
+#    print("-" * 13)
+#    for i in range(3):
+#       print("|", board[0+i*3], "|", board[1+i*3], "|", board[2+i*3], "|")
+#       print("-" * 13)
+
+# def take_input(player_token):
+#    valid = False
+#    while not valid:
+#       player_answer = input("Куда поставим " + player_token+"? ")
+#       try:
+#          player_answer = int(player_answer)
+#       except:
+#          print("Некорректный ввод. Вы уверены, что ввели число?")
+#          continue
+#       if player_answer >= 1 and player_answer <= 9:
+#          if(str(board[player_answer-1]) not in "XO"):
+#             board[player_answer-1] = player_token
+#             valid = True
+#          else:
+#             print("Эта клетка уже занята!")
+#       else:
+#         print("Некорректный ввод. Введите число от 1 до 9.")
+
+# def check_win(board):
+#    win_coord = ((0,1,2), (3,4,5), (6,7,8), (0,3,6), (1,4,7), (2,5,8), (0,4,8), (2,4,6))
+#    for each in win_coord:
+#        if board[each[0]] == board[each[1]] == board[each[2]]:
+#           return board[each[0]]
+#    return False
+
+# def main(board):
+#     counter = 0
+#     win = False
+#     while not win:
+#         draw_board(board)
+#         if counter % 2 == 0:
+#            take_input("X")
+#         else:
+#            take_input("O")
+#         counter += 1
+#         if counter > 4:
+#            tmp = check_win(board)
+#            if tmp:
+#               print(tmp, "выиграл!")
+#               win = True
+#               break
+#         if counter == 9:
+#             print("Ничья!")
+#             break
+#     draw_board(board)
+# main(board)
+
+# input("Нажмите Enter для выхода!")
