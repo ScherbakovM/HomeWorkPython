@@ -20,7 +20,8 @@ async def answer_user(message: types.Message):
 
 @dp.message_handler(state=Test.Q1)
 async def answer_user(message: types.Message, state:FSMContext):
-    myList = message.text.split(' ') # переводим в лист
+    textMessage = message.text.lower()
+    myList = textMessage.split(' ') # переводим в лист
     answer = list(filter(Del, myList)) # фильтруем без "абв"
     answer = " ".join(answer) # возвращаем в строку 
     await message.reply(answer)
